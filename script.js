@@ -11,9 +11,20 @@ window.onload = function() {
     image.style.height = image.naturalHeight * scale + 'px';
 
     // Lấy đối tượng audio
+    // Lấy đối tượng audio
     var backgroundMusic = document.getElementById('background-music');
     
-    // Bắt đầu phát nhạc nền
-    backgroundMusic.play();
+    // Bắt sự kiện click hoặc touch để bắt đầu phát nhạc
+    document.addEventListener('click', playBackgroundMusic);
+    document.addEventListener('touchstart', playBackgroundMusic);
+    
+    function playBackgroundMusic() {
+        // Loại bỏ các event listener sau khi đã phát nhạc
+        document.removeEventListener('click', playBackgroundMusic);
+        document.removeEventListener('touchstart', playBackgroundMusic);
+        
+        // Bắt đầu phát nhạc nền
+        backgroundMusic.play();
+    }
 };
 
