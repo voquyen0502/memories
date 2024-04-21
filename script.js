@@ -10,3 +10,12 @@ window.onload = function() {
     image.style.width = image.naturalWidth * scale + 'px';
     image.style.height = image.naturalHeight * scale + 'px';
 };
+
+window.onload = function() {
+    // Lấy đối tượng audio
+    var backgroundMusic = document.getElementById('background-music');
+    
+    // Bắt đầu phát nhạc nền
+    backgroundMusic.play();
+};
+
