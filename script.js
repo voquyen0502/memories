@@ -9,9 +9,7 @@ window.onload = function() {
     // Áp dụng tỉ lệ thu nhỏ
     image.style.width = image.naturalWidth * scale + 'px';
     image.style.height = image.naturalHeight * scale + 'px';
-};
 
-window.onload = function() {
     // Lấy đối tượng audio
     var backgroundMusic = document.getElementById('background-music');
     
